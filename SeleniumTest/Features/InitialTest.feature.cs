@@ -31,8 +31,8 @@ namespace SeleniumTest.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "InitialTest", "\tIn order to test web driver\r\n\tI want to open www.google.com\r\n\tAnd check if it lo" +
-                    "ads correctly", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "InitialTest", "\tIn order to test web driver\r\n\tI want to open Bicycle form\r\n\tAnd check if it load" +
+                    "s correctly", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -65,15 +65,15 @@ namespace SeleniumTest.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Open Google")]
-        public virtual void OpenGoogle()
+        [NUnit.Framework.DescriptionAttribute("Open bicycle claim form")]
+        public virtual void OpenBicycleClaimForm()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open Google", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open bicycle claim form", ((string[])(null)));
 #line 6
 this.ScenarioSetup(scenarioInfo);
-#line 7
- testRunner.Given("I have opened https://www.google.com/", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
+ testRunner.Given("I have opened https://finclaimstest-atest.azurewebsites.net/en/bicycle", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 9
  testRunner.Then("search page should be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

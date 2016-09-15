@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using TechTalk.SpecFlow;
@@ -24,7 +21,7 @@ namespace SeleniumTest.Bindings
         {
             var driver = ScenarioContext.Current.Get<IWebDriver>();
 
-            var element = driver.FindElement(By.Id("lst-ib"));
+            var element = driver.FindElement(By.ClassName("ecmt-logotype"));
             Assert.IsNotNull(element);
         }
     }
