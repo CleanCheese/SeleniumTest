@@ -12,7 +12,6 @@ namespace SeleniumTest.Bindings
         public void NavigateToUrl(string url)
         {
             var driver = ScenarioContext.Current.Get<IWebDriver>();
-
             driver.Navigate().GoToUrl(new Uri(url));
         }
 
