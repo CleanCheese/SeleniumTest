@@ -100,6 +100,8 @@
       <DependentUpon>InitialTest.feature</DependentUpon>
     </Compile>
     <Compile Include="Hooks.cs" />
+    <Compile Include="PageObjects\BicycleClaimPage.cs" />
+    <Compile Include="PageObjects\BicycleClaimSections\WhatHasHappenedSection.cs" />
     <Compile Include="TestConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -111,9 +113,7 @@
     </None>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="PageObjects\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Drivers\chromedriver.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
