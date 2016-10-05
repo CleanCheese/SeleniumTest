@@ -2,18 +2,18 @@
 
 namespace SeleniumTest.PageObjects.BicycleClaimSections
 {
-    public class WhatHasHappenedSection
+    public class PleaseGiveThePersonalDetailsSection
     {
         private static IWebDriver _driver;
         private static IWebElement _section;
 
-        public WhatHasHappenedSection(IWebDriver driver)
+        public PleaseGiveThePersonalDetailsSection(IWebDriver driver)
         {
             _driver = driver;
             _section = _driver.FindElement(_sectionLocator);
         }
 
-        private By _sectionLocator = By.Id("eventForm_section");
+        private By _sectionLocator = By.Id("bicycleCosts_section");
         private By _headerLocator = By.XPath("//*[contains(@class,'ecmt-details-summary iconbefore icon-arrowdown')]");
 
 

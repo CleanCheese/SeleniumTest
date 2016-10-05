@@ -101,6 +101,8 @@
     </Compile>
     <Compile Include="Hooks.cs" />
     <Compile Include="PageObjects\BicycleClaimPage.cs" />
+    <Compile Include="PageObjects\BicycleClaimSections\PleaseGiveThePersonalDetailsSection.cs" />
+    <Compile Include="PageObjects\BicycleClaimSections\WhatItemTheLossConcernsSection.cs" />
     <Compile Include="PageObjects\BicycleClaimSections\WhatHasHappenedSection.cs" />
     <Compile Include="TestConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -10,9 +10,10 @@ namespace SeleniumTest.PageObjects
         public BicycleClaimPage(IWebDriver driver) { _driver = driver; }
 
         private By _header = By.TagName("h2");
-        private By _whatItemConsernSection = By.Id("bicycleCosts_section");
-        private By _pleaseGiveDetailsSection = By.Id("bicycleNotifier_section");
-
+        private By _iHaveFilledInAllTheNecessary = By.Id("toggleReviewed");
+        private By _sendButton = By.Id("sendClaimButton");
+        private By _abortButton = By.Id("cancelButton");
+        
         public IWebElement Header
         {
             get
@@ -22,8 +23,48 @@ namespace SeleniumTest.PageObjects
             }
         }
 
+        public IWebElement Checkbox
+        {
+            get
+            {
+                var element = _driver.FindElement(_iHaveFilledInAllTheNecessary);
+                return element;
+            }
+        }
+
+        public IWebElement SendButton
+        {
+            get
+            {
+                var element = _driver.FindElement(_iHaveFilledInAllTheNecessary);
+                return element;
+            }
+        }
+
+        public IWebElement AbortButton
+        {
+            get
+            {
+                var element = _driver.FindElement(_iHaveFilledInAllTheNecessary);
+                return element;
+            }
+        }
+
+        public void ClickIHaveFilledInCheckbox()
+        {
+            _driver.FindElement(_iHaveFilledInAllTheNecessary).Click();
+        }
 
 
+        public PleaseGiveThePersonalDetailsSection PleaseGiveThePersonalDetails
+        {
+            get
+            {
+                //var element = _driver.FindElement(_whatHasHappenedSection);
+                return new PleaseGiveThePersonalDetailsSection(_driver);
+            }
+        }
+        
         public WhatHasHappenedSection WhatHasHappenedSection
         {
             get
@@ -33,6 +74,13 @@ namespace SeleniumTest.PageObjects
             }
         }
 
-
+        public WhatItemTheLossConcernsSection WhatItemTheLossConcernsSection
+        {
+            get
+            {
+                //var element = _driver.FindElement(_whatHasHappenedSection);
+                return new WhatItemTheLossConcernsSection(_driver);
+            }
+        }
     }
 }
