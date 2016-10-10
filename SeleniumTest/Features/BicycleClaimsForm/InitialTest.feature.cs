@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace SeleniumTest.Features
+namespace SeleniumTest.Features.BicycleClaimsForm
 {
     using TechTalk.SpecFlow;
     
@@ -72,7 +72,7 @@ namespace SeleniumTest.Features
 #line 6
 this.ScenarioSetup(scenarioInfo);
 #line 8
- testRunner.Given("I have opened URL https://finclaimstest-atest.azurewebsites.net/en/bicycle", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I have opened \"BicycleClaimForm\" URL", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
  testRunner.Then("page header is visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -87,7 +87,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 11
 this.ScenarioSetup(scenarioInfo);
 #line 13
- testRunner.Given("I have opened URL https://finclaimstest-atest.azurewebsites.net/en/bicycle", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I have opened \"BicycleClaimForm\" URL", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 14
  testRunner.Then("section 1/3 header is visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -102,7 +102,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 16
 this.ScenarioSetup(scenarioInfo);
 #line 18
- testRunner.Given("I have opened URL https://finclaimstest-atest.azurewebsites.net/en/bicycle", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I have opened \"BicycleClaimForm\" URL", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 19
  testRunner.Then("section 2/3 header is visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -117,7 +117,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 21
 this.ScenarioSetup(scenarioInfo);
 #line 23
- testRunner.Given("I have opened URL https://finclaimstest-atest.azurewebsites.net/en/bicycle", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I have opened \"BicycleClaimForm\" URL", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 24
  testRunner.Then("section 3/3 header is visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -125,14 +125,14 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Open bicycle claim form and check checkbox")]
+        [NUnit.Framework.DescriptionAttribute("Open bicycle claim form and check Checkbox")]
         public virtual void OpenBicycleClaimFormAndCheckCheckbox()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open bicycle claim form and check checkbox", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Open bicycle claim form and check Checkbox", ((string[])(null)));
 #line 26
 this.ScenarioSetup(scenarioInfo);
 #line 28
- testRunner.Given("I have opened URL https://finclaimstest-atest.azurewebsites.net/en/bicycle", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I have opened \"BicycleClaimForm\" URL", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 29
  testRunner.Then("checkbox is visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -147,7 +147,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 31
 this.ScenarioSetup(scenarioInfo);
 #line 33
- testRunner.Given("I have opened URL https://finclaimstest-atest.azurewebsites.net/en/bicycle", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I have opened \"BicycleClaimForm\" URL", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 34
  testRunner.Then("Send button is visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -162,7 +162,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 36
 this.ScenarioSetup(scenarioInfo);
 #line 38
- testRunner.Given("I have opened URL https://finclaimstest-atest.azurewebsites.net/en/bicycle", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I have opened \"BicycleClaimForm\" URL", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 39
  testRunner.Then("Abort button is visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

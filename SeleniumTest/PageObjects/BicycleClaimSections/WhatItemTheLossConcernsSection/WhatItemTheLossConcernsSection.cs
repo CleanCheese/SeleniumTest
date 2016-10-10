@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace SeleniumTest.PageObjects.BicycleClaimSections
+namespace SeleniumTest.PageObjects.BicycleClaimSections.WhatItemTheLossConcernsSection
 {
     public class WhatItemTheLossConcernsSection
     {

@@ -1,5 +1,7 @@
 ﻿using OpenQA.Selenium;
-using SeleniumTest.PageObjects.BicycleClaimSections;
+using SeleniumTest.PageObjects.BicycleClaimSections.PleaseGiveTHePersonalDetailsSection;
+using SeleniumTest.PageObjects.BicycleClaimSections.WhatHasHappenedSection;
+using SeleniumTest.PageObjects.BicycleClaimSections.WhatItemTheLossConcernsSection;
 
 namespace SeleniumTest.PageObjects
 {
@@ -36,7 +38,7 @@ namespace SeleniumTest.PageObjects
         {
             get
             {
-                var element = _driver.FindElement(_iHaveFilledInAllTheNecessary);
+                var element = _driver.FindElement(_sendButton);
                 return element;
             }
         }
@@ -45,7 +47,7 @@ namespace SeleniumTest.PageObjects
         {
             get
             {
-                var element = _driver.FindElement(_iHaveFilledInAllTheNecessary);
+                var element = _driver.FindElement(_abortButton);
                 return element;
             }
         }
