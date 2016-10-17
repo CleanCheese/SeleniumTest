@@ -1,14 +1,14 @@
-﻿using System;
-using System.Configuration;
+﻿using System.Configuration;
+using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
-using SeleniumTest.PageObjects;
+using SeleniumTest.PageObjects.BicycleClaim;
 using TechTalk.SpecFlow;
 
 namespace SeleniumTest.Bindings
 {
     [Binding]
-    public sealed class InitialTestBindings
+    public sealed class BicycleClaimFormBindings
     {
         [Given(@"I have opened ""(.*)"" page")]
         public void NavigateToUrl(string url)
@@ -41,7 +41,7 @@ namespace SeleniumTest.Bindings
         {
             var driver = ScenarioContext.Current.Get<IWebDriver>();
             var page = new BicycleClaimPage(driver);
-            var element = page.WhatHasHappenedSection.Header;
+            var element = page.WhatHasHappened.Header;
             Assert.IsNotNull(element);
         }
 
@@ -50,7 +50,7 @@ namespace SeleniumTest.Bindings
         {
             var driver = ScenarioContext.Current.Get<IWebDriver>();
             var page = new BicycleClaimPage(driver);
-            var element = page.WhatItemTheLossConcernsSection.Header;
+            var element = page.LossConcerns.Header;
             Assert.IsNotNull(element);
         }
 
@@ -59,7 +59,7 @@ namespace SeleniumTest.Bindings
         {
             var driver = ScenarioContext.Current.Get<IWebDriver>();
             var page = new BicycleClaimPage(driver);
-            var element = page.PleaseGiveThePersonalDetails.Header;
+            var element = page.PersonalDetails.Header;
             Assert.IsNotNull(element);
         }
 
@@ -89,5 +89,13 @@ namespace SeleniumTest.Bindings
             var element = page.AbortButton;
             Assert.IsNotNull(element);
         }
+
+        [When(@"I wait for ""(.*)"" seconds")]
+        [Then(@"I wait for ""(.*)"" seconds")]
+        public void ThenIWaitForSeconds(int seconds)
+        {
+            Thread.Sleep(seconds*1000);
+        }
+
     }
 }

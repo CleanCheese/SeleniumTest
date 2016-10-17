@@ -92,41 +92,60 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Bindings\RadioButtonBindings.cs" />
-    <Compile Include="Bindings\InitialTestBindings.cs" />
+    <Compile Include="Bindings\S1_WhatHasHappened\RadioButtonBindings.cs" />
+    <Compile Include="Bindings\S1_WhatHasHappened\TextFieldsBindings.cs" />
+    <Compile Include="Bindings\BicycleClaimFormBindings.cs" />
+    <Compile Include="Bindings\S2_WhatItemTheLossConcerns\CostsBindings.cs" />
     <Compile Include="Browsers.cs" />
-    <Compile Include="Features\BicycleClaimsForm\InitialTest.feature.cs">
-      <DependentUpon>InitialTest.feature</DependentUpon>
+    <Compile Include="Features\BicycleClaim\S1_WhatHasHappened1.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>S1_WhatHasHappened.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\BicycleClaim\S2_LossConcerns.feature.cs">
+      <DependentUpon>S2_LossConcerns.feature</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Features\BicycleClaimsForm\WhatHasHappened.feature.cs">
+    <Compile Include="Features\BicycleClaim\BicycleClaim.feature.cs">
+      <DependentUpon>BicycleClaim.feature</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>WhatHasHappened.feature</DependentUpon>
     </Compile>
     <Compile Include="Hooks.cs" />
-    <Compile Include="PageObjects\BicycleClaimPage.cs" />
-    <Compile Include="PageObjects\BicycleClaimSections\PleaseGiveTHePersonalDetailsSection\PleaseGiveThePersonalDetailsSection.cs" />
-    <Compile Include="PageObjects\BicycleClaimSections\WhatHasHappenedSection\WhatHappendRadioButtons.cs" />
-    <Compile Include="PageObjects\BicycleClaimSections\WhatHasHappenedSection\WhatHasHappenedSection.cs" />
-    <Compile Include="PageObjects\BicycleClaimSections\WhatItemTheLossConcernsSection\WhatItemTheLossConcernsSection.cs" />
+    <Compile Include="PageObjects\BicycleClaim\BicycleClaimPage.cs" />
+    <Compile Include="PageObjects\BicycleClaim\Sections\S1_WhatHasHappened\Scopes\Description.cs" />
+    <Compile Include="PageObjects\BicycleClaim\Sections\S1_WhatHasHappened\Scopes\RadioButtons.cs" />
+    <Compile Include="PageObjects\BicycleClaim\Sections\S1_WhatHasHappened\Scopes\WhenHappened.cs" />
+    <Compile Include="PageObjects\BicycleClaim\Sections\S1_WhatHasHappened\Scopes\WhereHappened.cs" />
+    <Compile Include="PageObjects\BicycleClaim\Sections\S1_WhatHasHappened\WhatHasHappened.cs" />
+    <Compile Include="PageObjects\BicycleClaim\Sections\S2_LossConcerns\Scopes\Costs.cs" />
+    <Compile Include="PageObjects\BicycleClaim\Sections\S2_LossConcerns\Scopes\Estimator.cs" />
+    <Compile Include="PageObjects\BicycleClaim\Sections\S2_LossConcerns\Scopes\Owner.cs" />
+    <Compile Include="PageObjects\BicycleClaim\Sections\S2_LossConcerns\LossConcerns.cs" />
+    <Compile Include="PageObjects\BicycleClaim\Sections\S3_PleaseGiveTHePersonalDetails\PersonalDetails.cs" />
     <Compile Include="TestConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Features\BicycleClaimsForm\InitialTest.feature">
+    <None Include="Features\BicycleClaim\S1_WhatHasHappened.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>InitialTest.feature.cs</LastGenOutput>
+      <LastGenOutput>S1_WhatHasHappened1.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\BicycleClaimsForm\WhatHasHappened.feature">
+    <None Include="Features\BicycleClaim\S2_LossConcerns.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>WhatHasHappened.feature.cs</LastGenOutput>
+      <LastGenOutput>S2_LossConcerns.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\BicycleClaim\BicycleClaim.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BicycleClaim.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="BicycleClaim\BicycleClaimSection\S3_PleaseGiveTHePersonalDetails\Scopes\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Drivers\chromedriver.exe">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

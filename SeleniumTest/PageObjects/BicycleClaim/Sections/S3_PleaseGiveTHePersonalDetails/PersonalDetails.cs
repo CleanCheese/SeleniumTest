@@ -1,13 +1,13 @@
-﻿using OpenQA.Selenium;
+using OpenQA.Selenium;
 
-namespace SeleniumTest.PageObjects.BicycleClaimSections.WhatItemTheLossConcernsSection
+namespace SeleniumTest.PageObjects.BicycleClaim.Sections.S3_PleaseGiveTHePersonalDetails
 {
-    public class WhatItemTheLossConcernsSection
+    public class PersonalDetails
     {
         private static IWebDriver _driver;
         private static IWebElement _section;
 
-        public WhatItemTheLossConcernsSection(IWebDriver driver)
+        public PersonalDetails(IWebDriver driver)
         {
             _driver = driver;
             _section = _driver.FindElement(_sectionLocator);

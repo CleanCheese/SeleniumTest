@@ -1,9 +1,9 @@
-﻿using OpenQA.Selenium;
-using SeleniumTest.PageObjects.BicycleClaimSections.PleaseGiveTHePersonalDetailsSection;
-using SeleniumTest.PageObjects.BicycleClaimSections.WhatHasHappenedSection;
-using SeleniumTest.PageObjects.BicycleClaimSections.WhatItemTheLossConcernsSection;
+using OpenQA.Selenium;
+using SeleniumTest.PageObjects.BicycleClaim.Sections.S1_WhatHasHappened;
+using SeleniumTest.PageObjects.BicycleClaim.Sections.S2_LossConcerns;
+using SeleniumTest.PageObjects.BicycleClaim.Sections.S3_PleaseGiveTHePersonalDetails;
 
-namespace SeleniumTest.PageObjects
+namespace SeleniumTest.PageObjects.BicycleClaim
 {
     public class BicycleClaimPage
     {
@@ -58,31 +58,10 @@ namespace SeleniumTest.PageObjects
         }
 
 
-        public PleaseGiveThePersonalDetailsSection PleaseGiveThePersonalDetails
-        {
-            get
-            {
-                //var element = _driver.FindElement(_whatHasHappenedSection);
-                return new PleaseGiveThePersonalDetailsSection(_driver);
-            }
-        }
-        
-        public WhatHasHappenedSection WhatHasHappenedSection
-        {
-            get
-            {
-                //var element = _driver.FindElement(_whatHasHappenedSection);
-                return new WhatHasHappenedSection(_driver);
-            }
-        }
+        public WhatHasHappened WhatHasHappened => new WhatHasHappened(_driver);
 
-        public WhatItemTheLossConcernsSection WhatItemTheLossConcernsSection
-        {
-            get
-            {
-                //var element = _driver.FindElement(_whatHasHappenedSection);
-                return new WhatItemTheLossConcernsSection(_driver);
-            }
-        }
+        public LossConcerns LossConcerns => new LossConcerns(_driver);
+
+        public PersonalDetails PersonalDetails => new PersonalDetails(_driver);
     }
 }

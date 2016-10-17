@@ -1,21 +1,21 @@
 ﻿using System.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
-using SeleniumTest.PageObjects;
+using SeleniumTest.PageObjects.BicycleClaim;
 using TechTalk.SpecFlow;
 
-namespace SeleniumTest.Bindings
+namespace SeleniumTest.Bindings.S1_WhatHasHappened
 {
     [Binding]
     public sealed class RadioButtonBindings
     {
-
+        //Scope - What happened to your bicycle - Radio buttons
         [When(@"I click ""(.*)"" radio button")]
         public void WhenIClickElement(string button)
         {
             var driver = ScenarioContext.Current.Get<IWebDriver>();
             var page = new BicycleClaimPage(driver);
-            page.WhatHasHappenedSection.WhatHappendRadioButtons.Click(button);
+            page.WhatHasHappened.RadioButtons.Click(button);
         }
 
         [Then(@"""(.*)"" radio button is selected")]
@@ -38,7 +38,7 @@ namespace SeleniumTest.Bindings
         {
             var driver = ScenarioContext.Current.Get<IWebDriver>();
             var page = new BicycleClaimPage(driver);
-            var selected = page.WhatHasHappenedSection.WhatHappendRadioButtons.IsSelected(button);
+            var selected = page.WhatHasHappened.RadioButtons.IsSelected(button);
             Debug.WriteLine("-- '"  + button + "' selected = " + selected);
             return selected;
 

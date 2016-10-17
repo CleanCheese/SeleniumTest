@@ -1,24 +1,24 @@
-﻿using System;
+using System;
 using OpenQA.Selenium;
 
-namespace SeleniumTest.PageObjects.BicycleClaimSections.WhatHasHappenedSection
+namespace SeleniumTest.PageObjects.BicycleClaim.Sections.S1_WhatHasHappened.Scopes
 {
-    public class WhatHappendRadioButtons
+    public class RadioButtons
     {
         private static IWebDriver _driver;
         private static IWebElement _section;
 
-        public WhatHappendRadioButtons(IWebDriver section)
+        public RadioButtons(IWebDriver driver)
         {
-            _driver = section;
+            _driver = driver;
             _section = _driver.FindElement(_sectionLocator);
         }
 
-        private By _sectionLocator = By.Id("eventForm_section");
-        private By _bicycleStolenRbLocator = By.Id("eventTypeStolen");
-        private By _bicycleVandalizedRbLocator = By.Id("eventTypeVandalized");
-        private By _bicycleBrokenRbLocator = By.Id("eventTypeBroken");
-        private By _bicycleDamagedRbLocator = By.Id("eventTypeDamaged");
+        private static By _sectionLocator = By.Id("eventForm_section");
+        private static By _bicycleStolenRbLocator = By.Id("eventTypeStolen");
+        private static By _bicycleVandalizedRbLocator = By.Id("eventTypeVandalized");
+        private static By _bicycleBrokenRbLocator = By.Id("eventTypeBroken");
+        private static By _bicycleDamagedRbLocator = By.Id("eventTypeDamaged");
 
         public void Click(string button)
         {
