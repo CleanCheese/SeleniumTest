@@ -57,6 +57,21 @@ namespace SeleniumTest.PageObjects.BicycleClaim
             _driver.FindElement(_iHaveFilledInAllTheNecessary).Click();
         }
 
+        public void Click(string button)
+        {
+            switch (button.ToLower())
+            {
+                case "send":
+                    _driver.FindElement(_sendButton).Click();
+                    break;
+                case "abort":
+                    _driver.FindElement(_abortButton).Click();
+                    break;
+
+            }
+        }
+
+
 
         public WhatHasHappened WhatHasHappened => new WhatHasHappened(_driver);
 

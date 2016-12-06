@@ -15,7 +15,7 @@ namespace SeleniumTest.PageObjects.BicycleClaim.Sections.S1_WhatHasHappened.Scop
         }
 
         private By _sectionLocator = By.Id("eventForm_section");
-        private By _descriptionLocator = By.Id("bicycleEventDescriptionTextArea");
+        private By _descriptionLocator = By.Id("bicycleEventDescriptionTextAreaWithHeaderInput");
         
         public void SetDescription(string description)
         {

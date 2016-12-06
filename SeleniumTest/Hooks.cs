@@ -22,7 +22,7 @@ namespace SeleniumTest
         {
             if (_currentDriver != null)
             {
-                CloseBrowserWindow(_currentDriver);
+                CloseBrowserAndKillAllProcesses(_currentDriver);
             }
         }
 
@@ -45,9 +45,9 @@ namespace SeleniumTest
                 WriteToLog("Ending scenario - " + ScenarioContext.Current.ScenarioInfo.Title);
 
                 var driver = ScenarioContext.Current.Get<IWebDriver>();
-                if (_currentDriver != null)
+                if (driver != null)
                 {
-                    CloseBrowserWindow(_currentDriver);
+                    CloseBrowserAndKillAllProcesses(driver);
                 }
 
                 WriteToLog("Ended scenario - " + ScenarioContext.Current.ScenarioInfo.Title);
@@ -93,12 +93,18 @@ namespace SeleniumTest
             return driver;
         }
 
-        private static void CloseBrowserWindow(IWebDriver driver)
+        private static void CloseBrowserAndKillAllProcesses(IWebDriver driver)
         {
             try
             {
                 driver.Close();
                 driver.Quit();
+
+                Process[] chromedrprocess = Process.GetProcessesByName("chromedriver");
+                foreach (var process in chromedrprocess)
+                {
+                    process.Kill();
+                }
             }
             catch (Exception ex)
             {

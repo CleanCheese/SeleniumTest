@@ -12,5 +12,5 @@ Scenario: S2 - Fill costs and click Save
 	And I enter "300" in field Repair costs
 	And I enter "Repair shop" in field Repair estimation is based on
 	And I wait for "5" seconds
-	And I click "Save" button
+	And I click Save button
 	Then I wait for "5" seconds

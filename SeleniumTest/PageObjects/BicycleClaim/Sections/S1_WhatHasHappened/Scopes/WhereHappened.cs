@@ -24,7 +24,7 @@ namespace SeleniumTest.PageObjects.BicycleClaim.Sections.S1_WhatHasHappened.Scop
         private static By _countrySelectedLocator = By.Id("eventCountryDropDown");
         private static By _countryLocator = By.Id("eventCountryDropDownSelect");
         private static By _cityLocator = By.Id("eventCityDropDownSelect");
-        private static By _addressLocator = By.Id("bicycleStolenStreetInputText");
+        private static By _addressLocator = By.Id("bicycleStolenStreetTextInput");
 
         private IWebElement City
         {

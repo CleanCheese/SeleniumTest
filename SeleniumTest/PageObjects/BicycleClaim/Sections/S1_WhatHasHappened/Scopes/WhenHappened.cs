@@ -15,7 +15,7 @@ namespace SeleniumTest.PageObjects.BicycleClaim.Sections.S1_WhatHasHappened.Scop
         }
 
         private static By _sectionLocator = By.Id("eventForm_section");
-        private static By _dateLocator = By.Name("bicycleStolenDateInputDate");
+        private static By _dateLocator = By.Name("bicycleStolenDateWithHeaderInput");
         
         public void SetDate(string date)
         {

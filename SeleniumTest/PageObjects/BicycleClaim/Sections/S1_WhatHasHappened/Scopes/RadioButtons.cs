@@ -15,10 +15,10 @@ namespace SeleniumTest.PageObjects.BicycleClaim.Sections.S1_WhatHasHappened.Scop
         }
 
         private static By _sectionLocator = By.Id("eventForm_section");
-        private static By _bicycleStolenRbLocator = By.Id("eventTypeStolen");
-        private static By _bicycleVandalizedRbLocator = By.Id("eventTypeVandalized");
-        private static By _bicycleBrokenRbLocator = By.Id("eventTypeBroken");
-        private static By _bicycleDamagedRbLocator = By.Id("eventTypeDamaged");
+        private static By _bicycleStolenRbLocator = By.Id("eventTypeRadioStolen");
+        private static By _bicycleVandalizedRbLocator = By.Id("eventTypeRadioVandalized");
+        private static By _bicycleBrokenRbLocator = By.Id("eventTypeRadioBroken");
+        private static By _bicycleDamagedRbLocator = By.Id("eventTypeRadioDamaged");
 
         public void Click(string button)
         {

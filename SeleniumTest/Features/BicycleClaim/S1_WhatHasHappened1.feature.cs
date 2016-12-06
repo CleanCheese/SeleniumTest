@@ -66,10 +66,10 @@ namespace SeleniumTest.Features.BicycleClaim
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("S1 - Verify radio button")]
-        [NUnit.Framework.TestCaseAttribute("1st btn", "Bicycle or parts of it have been stolen", "Bicycle has been vandalized", "Bicycle has got broken", "Bicycle has been damaged in a collision with a motor vehicle", new string[0])]
-        [NUnit.Framework.TestCaseAttribute("2nd btn", "Bicycle has been vandalized", "Bicycle or parts of it have been stolen", "Bicycle has got broken", "Bicycle has been damaged in a collision with a motor vehicle", new string[0])]
-        [NUnit.Framework.TestCaseAttribute("3rd btn", "Bicycle has got broken", "Bicycle or parts of it have been stolen", "Bicycle has been vandalized", "Bicycle has been damaged in a collision with a motor vehicle", new string[0])]
-        [NUnit.Framework.TestCaseAttribute("4th btn", "Bicycle has been damaged in a collision with a motor vehicle", "Bicycle or parts of it have been stolen", "Bicycle has been vandalized", "Bicycle has got broken", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("1st btn", "or parts of it have been stolen", "has been vandalized", "got broken", "been damaged in a collision with a motor vehicle", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("2nd btn", "has been vandalized", "or parts of it have been stolen", "got broken", "been damaged in a collision with a motor vehicle", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("3rd btn", "has got broken", "or parts of it have been stolen", "been vandalized", "been damaged in a collision with a motor vehicle", new string[0])]
+        [NUnit.Framework.TestCaseAttribute("4th btn", "has been damaged in a collision with a motor vehicle", "or parts of it have been stolen", "been vandalized", "got broken", new string[0])]
         public virtual void S1_VerifyRadioButton(string version, string radioButton1, string radioButton2, string radioButton3, string radioButton4, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("S1 - Verify radio button", exampleTags);
@@ -78,24 +78,24 @@ this.ScenarioSetup(scenarioInfo);
 #line 8
  testRunner.Given("I have opened \"BicycleClaimForm\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
- testRunner.When(string.Format("I click \"{0}\" radio button", radioButton1), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I click \"Bicycle {0}\" radio button", radioButton1), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
- testRunner.Then(string.Format("\"{0}\" radio button is selected", radioButton1), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("\"Bicycle {0}\" radio button is selected", radioButton1), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 11
- testRunner.And(string.Format("\"{0}\" radio button is unselected", radioButton2), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("\"Bicycle {0}\" radio button is unselected", radioButton2), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 12
- testRunner.And(string.Format("\"{0}\" radio button is unselected", radioButton3), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("\"Bicycle has {0}\" radio button is unselected", radioButton3), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 13
- testRunner.And(string.Format("\"{0}\" radio button is unselected", radioButton4), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("\"Bicycle has {0}\" radio button is unselected", radioButton4), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("S1 - Fill all fields")]
-        public virtual void S1_FillAllFields()
+        [NUnit.Framework.DescriptionAttribute("S1 - Fill all fields and wait 5 seconds")]
+        public virtual void S1_FillAllFieldsAndWait5Seconds()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("S1 - Fill all fields", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("S1 - Fill all fields and wait 5 seconds", ((string[])(null)));
 #line 21
 this.ScenarioSetup(scenarioInfo);
 #line 22
@@ -112,6 +112,33 @@ this.ScenarioSetup(scenarioInfo);
  testRunner.And("I enter \"Stuff happened\" in field Describe in details what has happened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 28
  testRunner.Then("I wait for \"5\" seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("S1 - Fill all fields and click Save")]
+        public virtual void S1_FillAllFieldsAndClickSave()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("S1 - Fill all fields and click Save", ((string[])(null)));
+#line 31
+this.ScenarioSetup(scenarioInfo);
+#line 33
+ testRunner.Given("I have opened \"BicycleClaimForm\" page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 34
+ testRunner.When("I click \"Bicycle or parts of it have been stolen\" radio button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 35
+ testRunner.And("I enter \"05.10.2016\" in field When did the incident happen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 36
+ testRunner.And("I enter \"Egypti\" in field Country", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 37
+ testRunner.And("I enter \"City 1, street 1\" in field Street address or place", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 38
+ testRunner.And("I enter \"Stuff happened\" in field Describe in details what has happened", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 39
+ testRunner.And("I click Send button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 40
+ testRunner.Then("all information is filled in What has happened section", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

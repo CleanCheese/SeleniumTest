@@ -68,10 +68,10 @@ namespace SeleniumTest.PageObjects.BicycleClaim.Sections.S2_LossConcerns.Scopes
 
         public void Click(string button)
         {
-            switch (button)
+            switch (button.ToLower())
             {
-                case "Save": Save.Click(); break;
-                case "Cancel": Cancel.Click(); break;
+                case "save": Save.Click(); break;
+                case "cancel": Cancel.Click(); break;
             }
         }
     }

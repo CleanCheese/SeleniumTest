@@ -56,12 +56,20 @@ namespace SeleniumTest.Bindings.S2_WhatItemTheLossConcerns
             page.LossConcerns.Costs.Estimator.Set(estimator);
         }
 
-        [When(@"I click ""(.*)"" button")]
-        public void WhenIClickButton(string button)
+        [When(@"I click Save button")]
+        public void WhenIClickSaveButton()
         {
             var driver = ScenarioContext.Current.Get<IWebDriver>();
             var page = new BicycleClaimPage(driver);
-            page.LossConcerns.Costs.Click(button);
+            page.LossConcerns.Costs.Click("save");
+        }
+
+        [When(@"I click Send button")]
+        public void WhenIClickSendButton()
+        {
+            var driver = ScenarioContext.Current.Get<IWebDriver>();
+            var page = new BicycleClaimPage(driver);
+            page.Click("send");
         }
     }
 }
